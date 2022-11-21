@@ -1,4 +1,4 @@
-## Documentation for Project 5: AUX PROJECT 1: SHELL SCRIPTING
+## Documentation for Project: AUX PROJECT 1: SHELL SCRIPTING
 
 **Preparing prerequisites**
 
