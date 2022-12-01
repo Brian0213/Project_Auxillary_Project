@@ -14,7 +14,7 @@
 
 `scp -i segun-ec2.pem Onboard.sh ubuntu@3.17.29.169:~/;`
 
-![Copy onboard.sh to Ubuntu](./image/copy-onboard-to-ubuntu.PNG)
+![Copy Onboard to Ubuntu1](./image/copy-onboard-to-ubuntu.PNG)
 
 - To confirm Onboard.sh is on the server:
 
@@ -30,7 +30,7 @@ Create the project folder called Shell:
 
 `cd Shell`
 
-![Create Shell folder & Cd to Shell](./image/create-shell-folder-cd-to-shell.PNG)
+- ![Create Shell folder & Cd to Shell](./image/create-shell-folder-cd-to-shell.PNG)
 
 - Move the onboard.sh file into the Shell folder:
 
@@ -38,7 +38,7 @@ Create the project folder called Shell:
 
 `mv onboard.sh /home/ubuntu/Shell/`
 
-![Create Shell folder & Cd to Shell](./image/mv-onboard-shell-folder.PNG)
+![Create to Home](./image/mv-onboard-shell-folder.PNG)
 
 - Cd back to the Shell folder:
 
@@ -48,7 +48,7 @@ Create the project folder called Shell:
 
 `ls`
 
-![To confirm Onboard is in Shell](./image/confirm-onboard-is-in-shell.PNG)
+![Confirm Onboard is in Shell](./image/confirm-onboard-is-in-shell.PNG)
 
 - Create required files:
 
@@ -60,7 +60,7 @@ Create the project folder called Shell:
 
 `vi id_rsa.pub`
 
-![Write to the Id_rsa.pub](./image/write-idsapub-output.PNG)
+- ![Write to the Id_rsa.pub](./image/write-idsapub-output.PNG)
 
 - To copy the private key:
 
@@ -72,11 +72,11 @@ To edit names.csv:
 
 `vi names.csv`
 
-![Names Ouput](./image/names.csv-output.PNG)
+![Names Ouput](./image/names-csv-output.PNG)
 
 `pwd`
 
-![Pwd Ouput](./image/pwd-output.PNG)
+- ![Pwd Ouput](./image/pwd-output.PNG)
 
 - To update the Onboard file with the Shell home:
 
@@ -96,7 +96,7 @@ To edit names.csv:
 
 `./onboard.sh`
 
-![Shell Onboard Ouput](./image/admin-to-onboard.PNG)
+![Onboard Ouput](./image/admin-to-onboard.PNG)
 
 - To Switch to a Superuser:
 
@@ -114,7 +114,7 @@ To confirm the status of the onboard file:
 
 `ls -l /home/`
 
-![Onboard Output](./image/onboard-confirm-output.PNG)
+![Onboard Home Output](./image/onboard-confirm-output.PNG)
 
 - Confirm Developers group id:
 
@@ -148,11 +148,11 @@ To confirm the status of the onboard file:
 
 `ls -la`
 
-![Ls -la Output](./image/ls-la-output.PNG)
+![Ls la Output](./image/ls-la-output.PNG)
 
 `ls -la .ssh/`
 
-![Ls -la ssh Output](./image/ls-la-ssh-folder-output.PNG)
+![Ls la ssh Output](./image/ls-la-ssh-folder-output.PNG)
 
 - To exit the previous user
 
@@ -162,7 +162,7 @@ To confirm the status of the onboard file:
 
 `ssh -i oluse.pem developers@public-ip` (`ssh -i oluse.pem Beckham@3.15.199.227`)
 
-![User 2 ](./image/onboard-second-user.PNG)
+![User 2](./image/onboard-second-user.PNG)
 
 - To confirm the user does not have admin access:
 
