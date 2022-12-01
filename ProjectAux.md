@@ -14,13 +14,13 @@
 
 `scp -i segun-ec2.pem Onboard.sh ubuntu@3.17.29.169:~/;`
 
-![Copy Onboard to Ubuntu1](./image/copy-onboard-to-ubuntu.PNG)
+![Copy Onboard to Ubuntu1](./imagesAux/copy-onboard-to-ubuntu.PNG)
 
 - To confirm Onboard.sh is on the server:
 
 `ls -l`
 
-![To Show Onboard.sh is on the server](./image/To-confirm-Onboard.sh-in-server.PNG)
+![To Show Onboard.sh is on the server](./imagesAux/To-confirm-Onboard.sh-in-server.PNG)
 
 Create the project folder called Shell:
 
@@ -30,7 +30,7 @@ Create the project folder called Shell:
 
 `cd Shell`
 
-- ![Create Shell folder & Cd to Shell](./image/create-shell-folder-cd-to-shell.PNG)
+- ![Create Shell folder & Cd to Shell](./imagesAux/create-shell-folder-cd-to-shell.PNG)
 
 - Move the onboard.sh file into the Shell folder:
 
@@ -38,7 +38,7 @@ Create the project folder called Shell:
 
 `mv onboard.sh /home/ubuntu/Shell/`
 
-![Create to Home](./image/mv-onboard-shell-folder.PNG)
+![Create to Home](./imagesAux/mv-onboard-shell-folder.PNG)
 
 - Cd back to the Shell folder:
 
@@ -48,7 +48,7 @@ Create the project folder called Shell:
 
 `ls`
 
-![Confirm Onboard is in Shell](./image/confirm-onboard-is-in-shell.PNG)
+![Confirm Onboard is in Shell](./imagesAux/confirm-onboard-is-in-shell.PNG)
 
 - Create required files:
 
@@ -60,29 +60,29 @@ Create the project folder called Shell:
 
 `vi id_rsa.pub`
 
-- ![Write to the Id_rsa.pub](./image/write-idsapub-output.PNG)
+- ![Write to the Id_rsa.pub](./imagesAux/write-idsapub-output.PNG)
 
 - To copy the private key:
 
 `vi id_rsa`
 
-![Write to the Id_rsa](./image/write-idsa-output.PNG)
+![Write to the Id_rsa](./imagesAux/write-idsa-output.PNG)
 
 To edit names.csv:
 
 `vi names.csv`
 
-![Names Ouput](./image/names-csv-output.PNG)
+![Names Ouput](./imagesAux/names-csv-output.PNG)
 
 `pwd`
 
-- ![Pwd Ouput](./image/pwd-output.PNG)
+- ![Pwd Ouput](./imagesAux/pwd-output.PNG)
 
 - To update the Onboard file with the Shell home:
 
 `vi onboard.sh`
 
-![Shell Onboard Ouput](./image/shell-onboard-update-output.PNG)
+![Shell Onboard Ouput](./imagesAux/shell-onboard-update-output.PNG)
 
 - Create a group in the server:
 
@@ -96,43 +96,43 @@ To edit names.csv:
 
 `./onboard.sh`
 
-![Onboard Ouput](./image/admin-to-onboard.PNG)
+![Onboard Ouput](./imagesAux/admin-to-onboard.PNG)
 
 - To Switch to a Superuser:
 
 `sudo su`
 
-![Switch to Superuser](./image/switch-to-superuser.PNG)
+![Switch to Superuser](./imagesAux/switch-to-superuser.PNG)
 
 - Run the command below as a super user:
 
 `./onboard.sh`
 
-![Superuser Run line 109](./image/superuser-command.PNG)
+![Superuser Run line 109](./imagesAux/superuser-command.PNG)
 
 To confirm the status of the onboard file:
 
 `ls -l /home/`
 
-![Onboard Home Output](./image/onboard-confirm-output.PNG)
+![Onboard Home Output](./imagesAux/onboard-confirm-output.PNG)
 
 - Confirm Developers group id:
 
 `getent group developers`
 
-![Developers group id](./image/developers-group-output.PNG)
+![Developers group id](./imagesAux/developers-group-output.PNG)
 
 - Confirming individual developers id:
 
 `cat /etc/passwd`
 
-![Individual Developers assigned Id](./image/developers-assign-id.PNG)
+![Individual Developers assigned Id](./imagesAux/developers-assign-id.PNG)
 
 - To filter the users, run the command below:
 
 `cat /etc/passwd | awk -F':' '{ print $1}' | xargs -n1 groups`
 
-![Filter User Output](./image/filter-output.PNG)
+![Filter User Output](./imagesAux/filter-output.PNG)
 
 - Test a few of the users randomly, and ensure that you are able to connect to the server using the private key and the public key:
 
@@ -142,17 +142,17 @@ To confirm the status of the onboard file:
 
 `ssh -i oluse.pem developers@public-ip` (`ssh -i oluse.pem Alfred@3.15.199.227`)
 
-![Connecting to the server](./image/output-connection.PNG)
+![Connecting to the server](./imagesAux/output-connection.PNG)
 
 - Checking the priviledges of the user:
 
 `ls -la`
 
-![Ls la Output](./image/ls-la-output.PNG)
+![Ls la Output](./imagesAux/ls-la-output.PNG)
 
 `ls -la .ssh/`
 
-![Ls la ssh Output](./image/ls-la-ssh-folder-output.PNG)
+![Ls la ssh Output](./imagesAux/ls-la-ssh-folder-output.PNG)
 
 - To exit the previous user
 
@@ -162,25 +162,25 @@ To confirm the status of the onboard file:
 
 `ssh -i oluse.pem developers@public-ip` (`ssh -i oluse.pem Beckham@3.15.199.227`)
 
-![User 2](./image/onboard-second-user.PNG)
+![User 2](./imagesAux/onboard-second-user.PNG)
 
 - To confirm the user does not have admin access:
 
 `sudo apt update`
 
-![No Admin access](./image/to-confirm-user-donot-av-admin-rights.PNG)
+![No Admin access](./imagesAux/to-confirm-user-donot-av-admin-rights.PNG)
 
 - To confirm ssh file was created for the second user
 
 `ls -la .ssh/`
 
-![To confirm .ssh file was created](./image/confirm-ssh-file-created.PNG)
+![To confirm .ssh file was created](./imagesAux/confirm-ssh-file-created.PNG)
 
 Run the cat command to display the public key:
 
 `cat .ssh/authorized_keys`
 
-![Public Key Display](./image/public-key-display.PNG)
+![Public Key Display](./imagesAux/public-key-display.PNG)
 
 - To exit the user:
 
@@ -192,7 +192,7 @@ N.B.
 
 `./onboard.sh`
 
-![Error output](./image/Error-encountered.PNG)
+![Error output](./imagesAux/Error-encountered.PNG)
 
 Solution:
 
@@ -210,4 +210,4 @@ Solution:
 
 `./onboard.sh`
 
-![Fix Output](./image/fix-outcome.PNG)
+![Fix Output](./imagesAux/fix-outcome.PNG)
